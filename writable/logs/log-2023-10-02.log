@@ -1,0 +1,40 @@
+CRITICAL - 2023-10-02 15:35:00 --> Class "App\Controllers\RestfulController" not found
+in APPPATH\Controllers\RegistrasiController.php on line 7.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(306): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\tokoapi\\app\\Controllers\\RegistrasiController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\RegistrasiController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\RegistrasiController')
+ 5 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\RegistrasiController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-02 15:52:08 --> mysqli_sql_exception: Column 'kode_produk' cannot be null in C:\xampp\htdocs\tokoapi\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\tokoapi\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\tokoapi\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\tokoapi\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\tokoapi\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\tokoapi\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\tokoapi\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\tokoapi\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\tokoapi\app\Controllers\ProdukController.php(18): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\tokoapi\system\CodeIgniter.php(919): App\Controllers\ProdukController->create()
+#9 C:\xampp\htdocs\tokoapi\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukController))
+#10 C:\xampp\htdocs\tokoapi\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\tokoapi\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-10-02 15:54:28 --> mysqli_sql_exception: Column 'kode_produk' cannot be null in C:\xampp\htdocs\tokoapi\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\tokoapi\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\tokoapi\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\tokoapi\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\tokoapi\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\tokoapi\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\tokoapi\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\tokoapi\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\tokoapi\app\Controllers\ProdukController.php(18): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\tokoapi\system\CodeIgniter.php(919): App\Controllers\ProdukController->create()
+#9 C:\xampp\htdocs\tokoapi\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukController))
+#10 C:\xampp\htdocs\tokoapi\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\tokoapi\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
